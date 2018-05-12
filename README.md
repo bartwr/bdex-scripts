@@ -14,7 +14,7 @@ This app shows you the latest BarterDEX swaps.
 
 ## Install the app
 
-1. `git clone git@github.com:bartwr/bdex-scripts.git`
+1. `git clone https://github.com/bartwr/bdex-scripts.git`
 2. `cd bdex-scripts`
 3. `npm install`
 4. `npm start`
