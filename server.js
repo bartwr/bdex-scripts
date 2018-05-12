@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.get("/api/recentswaps", (req, res) => {
+app.get(config.apiUrl + "/api/recentswaps", (req, res) => {
 
   requestParams = Object.assign({}, clientServerOptions, {
     body: JSON.stringify({

@@ -1,3 +1,4 @@
 {
-  "userpass": "YOUR USERPASS"
+  "userpass": "YOUR USERPASS",
+  "apiUrl": "http://localhost:3000"
 }
