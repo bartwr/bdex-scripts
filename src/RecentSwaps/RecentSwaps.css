@@ -1,9 +1,16 @@
 .RecentSwaps {
   text-align: center;
 }
-.RecentSwaps-list {
+.RecentSwaps-row {
   display: flex;
   justify-content: space-around;
+  margin: 20px 0;
 }
 .RecentSwaps-col {
+  flex: 1;
+  text-align: center;
+  display: block;
+  font-size: 1.2em;
+  font-family: monospace;
 }
+

@@ -7,7 +7,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <RecentSwaps />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">bdex-scripts</h1>
@@ -15,6 +14,7 @@ class App extends Component {
         <p className="App-intro">
           On this page you'll find some tools for managing your BarterDEX setup.
         </p>
+        <RecentSwaps />
       </div>
     );
   }
