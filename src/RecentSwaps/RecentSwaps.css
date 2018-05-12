@@ -1,0 +1,9 @@
+.RecentSwaps {
+  text-align: center;
+}
+.RecentSwaps-list {
+  display: flex;
+  justify-content: space-around;
+}
+.RecentSwaps-col {
+}
