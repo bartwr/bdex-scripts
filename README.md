@@ -1,3 +1,32 @@
+# bdex-scripts
+
+This app shows you the latest BarterDEX swaps.
+
+![This screenshot shows the user interface (10 latest swaps)](https://i.imgur.com/REIBLCn.png)
+
+## Prereqs
+
+- Have the BarterDEX [marketmaker](https://slides.com/bartwr/bdex-on-rpi-v2#/24) up & running
+
+## Functionality
+
+- View your 10 latest swaps
+
+## Install the app
+
+1. `git clone git@github.com:bartwr/bdex-scripts.git`
+2. `cd bdex-scripts`
+3. `npm install`
+4. `npm start`
+
+The app will now be running on [localhost:3000](http://localhost:3000).
+
+## Found bugs?
+
+Create an issue, see: [Issues](https://github.com/bartwr/bdex-scripts/issues)
+
+____
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
