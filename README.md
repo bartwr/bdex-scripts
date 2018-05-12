@@ -16,8 +16,9 @@ This app shows you the latest BarterDEX swaps.
 
 1. `git clone https://github.com/bartwr/bdex-scripts.git`
 2. `cd bdex-scripts`
-3. `npm install`
-4. `npm start`
+3. Copy `config.example.json` to `config.json` and fill in your userpass
+4. `npm install`
+5. `npm start`
 
 The app will now be running on [localhost:3000](http://localhost:3000).
 

@@ -3,7 +3,8 @@ const fs = require("fs");
 var request = require('request');
 var cors = require('cors')
 
-var userpass = '42178a819558a614a2473a6a4cb36871047a132e0f0fc3ede1c998b02bbc4446';
+const config = require('./config.json')
+
 var clientServerOptions = {
   uri: 'http://127.0.0.1:7783',
   method: 'POST',
@@ -26,7 +27,7 @@ app.get("/api/recentswaps", (req, res) => {
 
   requestParams = Object.assign({}, clientServerOptions, {
     body: JSON.stringify({
-      userpass: userpass,
+      userpass: config.userpass,
       method: 'recentswaps',
       limit: 10
     })
