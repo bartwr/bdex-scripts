@@ -29,7 +29,7 @@ app.get(config.apiUrl + "api/recentswaps", (req, res) => {
     body: JSON.stringify({
       userpass: config.userpass,
       method: 'recentswaps',
-      limit: 10
+      limit: 50
     })
   })
   request(requestParams, function (error, response) {
