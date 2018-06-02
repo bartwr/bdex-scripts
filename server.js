@@ -23,13 +23,35 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.get(config.apiUrl + "/api/recentswaps", (req, res) => {
+app.get(config.apiUrl + "api/recentswaps", (req, res) => {
 
   requestParams = Object.assign({}, clientServerOptions, {
     body: JSON.stringify({
       userpass: config.userpass,
       method: 'recentswaps',
       limit: 10
+    })
+  })
+  request(requestParams, function (error, response) {
+    console.log(error, response.body);
+    res.json(response.body)
+    return;
+  });
+
+});
+
+app.get(config.apiUrl + "api/swapstatus", (req, res) => {
+
+  // Check on required fields
+  if( ! req.query.requestid) throw new Error('No request ID given');
+  if( ! req.query.quoteid)   throw new Error('No quote ID given');
+
+  requestParams = Object.assign({}, clientServerOptions, {
+    body: JSON.stringify({
+      userpass: config.userpass,
+      method: 'swapstatus',
+      requestid: req.query.requestid,
+      quoteid: req.query.quoteid
     })
   })
   request(requestParams, function (error, response) {

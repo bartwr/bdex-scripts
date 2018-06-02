@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Swap from './Swap.js';
 import * as R from 'ramda';
 import './RecentSwaps.css';
 
@@ -37,23 +38,7 @@ class RecentSwaps extends Component {
 
   // renderSwap :: Object -> ReactDOM
   renderSwap(swap) {
-    // If this swap did not fully succeed: do not render
-    if( ! swap[2] )
-      return(<div key={swap[0] + "-" + swap[1]} />)
-
-    // Put the swap info into a useful format
-    let swapInfo = [], succeededSwap = swap[2]
-    for(let key in succeededSwap)
-      swapInfo.push({ "key": key, "val": succeededSwap[key] })
-
-    // Render the swap
-    return (
-      <div key={swap[0] + "-" + swap[1]} className="RecentSwaps-row">
-        <div className="RecentSwaps-col" style={{ "color": swapInfo[0].val < 0 ? "red" : "green" }}><b>{swapInfo[0].key}</b><br />{swapInfo[0].val}</div>
-        <div className="RecentSwaps-col" style={{ "color": swapInfo[1].val < 0 ? "red" : "green" }}><b>{swapInfo[1].key}</b><br />{swapInfo[1].val}</div>
-        <div className="RecentSwaps-col"><b>{swapInfo[2].val}</b></div>
-      </div>
-    )
+    return <Swap swap={swap} key={swap[0] + '.' + swap[1]} />
   }
 
   render() {
