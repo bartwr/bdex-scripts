@@ -2,7 +2,7 @@
 
 This app shows you the latest BarterDEX swaps.
 
-![This screenshot shows the user interface (10 latest swaps)](https://i.imgur.com/REIBLCn.png)
+![This screenshot shows the user interface (10 latest swaps)](https://i.imgur.com/mUJEqZz.png)
 
 ## Prereqs
 
