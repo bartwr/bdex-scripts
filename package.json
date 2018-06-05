@@ -14,7 +14,7 @@
     "request": "^2.85.0"
   },
   "scripts": {
-    "start": "npm install && concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "concurrently \"npm run server\" \"react-scripts start\"",
     "server": "node server.js",
     "client": "react-scripts start",
     "build": "react-scripts build",

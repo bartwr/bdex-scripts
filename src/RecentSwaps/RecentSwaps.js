@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Swap from './Swap.js';
+import config from '../config.js';
 import * as R from 'ramda';
 import './RecentSwaps.css';
 
@@ -33,7 +34,7 @@ class RecentSwaps extends Component {
 
   // getRecentSwaps :: Int -> Promise
   getRecentSwaps(limit) {
-    return fetch( "http://localhost:3001/api/recentswaps", { cors: true } )
+    return fetch( config.apiUrl + "recentswaps", { cors: true } )
   }
 
   // renderSwap :: Object -> ReactDOM

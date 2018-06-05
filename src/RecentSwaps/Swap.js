@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import config from '../config.json';
 // import * as R from 'ramda';
 import './Swap.css';
 
@@ -34,7 +35,7 @@ class Swap extends Component {
 
   // getSwapStatus :: Object -> Promise
   getSwapStatus(params) {
-    return fetch( "http://localhost:3001/api/swapstatus?requestid="+params.requestid+"&quoteid="+params.quoteid );
+    return fetch( config.apiUrl + "swapstatus?requestid="+params.requestid+"&quoteid="+params.quoteid );
   }
 
   // getFormattedTime :: Timestamp -> String
@@ -55,7 +56,7 @@ class Swap extends Component {
 
     // Render the swap
     return (
-      <div key={this.props. swap[0] + "-" + this.props.swap[1]} className="RecentSwaps-row">
+      <div key={this.props.swap[0] + "-" + this.props.swap[1]} className="RecentSwaps-row">
         <div className="RecentSwaps-col"><b>{this.getFormattedTime(this.state.swapStatus.finishtime)}</b></div>
         <div className="RecentSwaps-col" style={{ "color": swapInfo[0].val < 0 ? "red" : "green" }}><b>{swapInfo[0].key}</b><br />{swapInfo[0].val}</div>
         <div className="RecentSwaps-col" style={{ "color": swapInfo[1].val < 0 ? "red" : "green" }}><b>{swapInfo[1].key}</b><br />{swapInfo[1].val}</div>
