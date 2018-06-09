@@ -48,6 +48,9 @@ class Swap extends Component {
     // If this swap did not fully succeed: do not render
     if( ! this.props.swap[2] )
       return(<div key={this.props.swap[0] + "-" + this.props.swap[1]} />)
+    // If this swap did not fully succeed: do not render
+    if( this.state.swapStatus.error == 'swap never started' )
+      return(<div key={this.props.swap[0] + "-" + this.props.swap[1]} />)
 
     // Put the swap info into an useful format
     let swapInfo = [], succeededSwap = this.props.swap[2]

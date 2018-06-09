@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Swap from './Swap.js';
-import config from '../config.js';
+import config from '../config.json';
 import * as R from 'ramda';
 import './RecentSwaps.css';
 
