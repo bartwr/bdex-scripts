@@ -16,7 +16,7 @@ class RecentSwaps extends Component {
     let self = this;
 
     // Get recent swaps on page load 
-    this.getRecentSwaps(10)
+    this.getRecentSwaps(500)
       .then(res => res.text())
       .then(function(json) {
         json = JSON.parse(json)
@@ -34,7 +34,7 @@ class RecentSwaps extends Component {
 
   // getRecentSwaps :: Int -> Promise
   getRecentSwaps(limit) {
-    return fetch( config.apiUrl + "recentswaps", { cors: true } )
+    return fetch( config.apiUrl + "recentswaps?limit="+limit, { cors: true } )
   }
 
   // renderSwap :: Object -> ReactDOM
